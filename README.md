@@ -3,6 +3,16 @@
 Project created with:
 `mix phx.new rocketpay --no-webpack --no-html`
 
+Development And Test Database with Docker and Postgres:
+`docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres`
+
+Enabling Credo to ElixirLinter:
+
+- add line to **mix.exs** file at **deps** array.
+  `{:credo, "~> 1.5", only: [:dev, :test], runtime: false}`
+
+- run `mix deps.get`
+
 To start your Phoenix server:
 
 - Install dependencies with `mix deps.get`
